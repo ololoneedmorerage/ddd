@@ -146,7 +146,7 @@ elif Your_action == 3:
     Your_actiongame1 = input()
     Your_actiongame1 = int(Your_actiongame1)
     if Your_actiongame1 == 1:
-        class Ingame1Action1(UniversityAction):
+        class Ingame1Action1(OtherAction):
             print('''Выбор:
         1 - Пойти с друзьями в бар
         2 - Позависать на улице
@@ -160,7 +160,7 @@ elif Your_action == 3:
         elif your_game1_action1 == 3:
             print('Лучшее кино - Халявное кино')
     elif Your_actiongame1 == 2:
-        class Ingame2Action2(UniversityAction):
+        class Ingame2Action2(OtherAction):
             print('''Выбор:
         1 - Пойти в кафе
         2 - Пойти в кино
@@ -174,14 +174,14 @@ elif Your_action == 3:
         elif your_game2_action2 == 3:
             print('Дождь на улице какой парк?')
     elif Your_actiongame1 == 3:
-        class Ingame3Action3(UniversityAction):
+        class Ingame3Action3(OtherAction):
             print('''Такое тоже бывает:D''')
 elif Your_action == 4:
     print ('''Тут ты можешь выбрать себе занятие сам''')
-    Your_action = OtherAction()
-    print ('Напиши чем ты хочешь заняться?:')
-    your1_action = input()
-    print ('Сегодня ты займешься',your1_action)
+    class OtherAction(DefaultAction):
+        print ('Напиши чем ты хочешь заняться?:')
+        your1_action = input()
+        print ('Сегодня ты займешься',your1_action)
 
     
 print ('Удачи!')
