@@ -1,3 +1,4 @@
+
 class DefaultAction:
     action1 = 0
     action2 = 0
@@ -6,13 +7,24 @@ class DefaultAction:
         main.new_action1 = new_action1
         main.new_action2 = new_action2
         main.new_action3 = new_action3
+#Вывод на экран меню и выбор пункта
 print('''Выбор:
         1 - Играть в компютер
         2 - Заняться учебой
         3 - Отправиться гулять
         4 - Любое другое действие.''')
-Your_action = input()
-Your_action = int(Your_action)
+Your_action = ""
+while (Your_action == ""):
+    Your_action = input()
+    try: Your_action = int(Your_action )
+    except ValueError:
+            print("Пожалуйста, введите число.")
+            Your_action = ""
+            continue
+    if (Your_action < 1 or Your_action > 4):
+        Your_action = ""
+        print("Введенное число должно лежать в интервале [1; 4] в соответствии количеством пунктов меню.")
+#Вывод на экран и выбор соответствующего подраздела
 if Your_action == 1:
     class  GameAction(DefaultAction):
         print('''Выбор:
@@ -20,7 +32,7 @@ if Your_action == 1:
         2 - Starcraft
         3 - Diablo III''')
     Your_actiongame1 = input()
-    Your_actiongame1 = int(Your_actiongame1)
+    Your_actiongame1 = int(Your_actiongame1 )
     if Your_actiongame1 == 1:
         class Ingame1Action1(GameAction):
             print('''Выбор:
