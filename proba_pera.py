@@ -3,7 +3,7 @@ class DefaultAction:
     action1 = 0
     action2 = 0
     action3 = 0
-    def New_action(main, new_action1, new_action2, new_action3, new_action4):
+    def New_action(main, new_action1, new_action2, new_action3,):
         main.new_action1 = new_action1
         main.new_action2 = new_action2
         main.new_action3 = new_action3
@@ -182,7 +182,7 @@ elif Your_action == 3:
         if your_game2_action2 == 1:
             print('Девушка затащила вас в суши бар и накормила ролами,будь доволен,платить то тебе:D')
         elif your_game2_action2 == 2:
-            print('Ну задний ряд,все дела')
+            print('Удачного просмотра:D')
         elif your_game2_action2 == 3:
             print('Дождь на улице какой парк?')
     elif Your_actiongame1 == 3:
@@ -197,3 +197,5 @@ elif Your_action == 4:
 
     
 print ('Удачи!')
+
+
